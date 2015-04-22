@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>さよなら厭世観</title>
-    <link>eichann.github.io/</link>
-    <description>Recent content on さよなら厭世観</description>
+    <title>Posts on さよなら厭世観</title>
+    <link>eichann.github.io/post/</link>
+    <description>Recent content in Posts on さよなら厭世観</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     
     
     
     <lastBuildDate>Wed, 22 Apr 2015 21:10:09 JST</lastBuildDate>
-    <atom:link href="eichann.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="eichann.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>あああ</title>
