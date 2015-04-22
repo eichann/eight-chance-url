@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>さよなら厭世観</title>
-    <link>eichann.github.io/</link>
+    <link>/</link>
     <description>Recent content on さよなら厭世観</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,14 +10,14 @@
     
     
     <lastBuildDate>Wed, 22 Apr 2015 21:10:09 JST</lastBuildDate>
-    <atom:link href="eichann.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>あああ</title>
-      <link>/eichann.github.io/post/first/</link>
+      <link>/post/first/</link>
       <pubDate>Wed, 22 Apr 2015 21:10:09 JST</pubDate>
       
-      <guid>/eichann.github.io/post/first/</guid>
+      <guid>/post/first/</guid>
       <description>
 
 &lt;h1 id=&#34;てすと:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;てすと&lt;/h1&gt;
