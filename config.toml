@@ -1,0 +1,12 @@
+baseurl = "http://eight-chance.github.io/"
+languageCode = "ja"
+title = "さよなら厭世観"
+author = "rakuishi"
+
+[params]
+  logo      = "/images/logo.jpg"
+  copyright = "eichann All rights reserved."
+  twitter   = "https://twitter.com/abkin401"
+  facebook  = "https://www.facebook.com/koichiro.abe.14"
+  github    = "https://github.com/eichann/"
+  email     = "k.abe.in401@gmail.com"
