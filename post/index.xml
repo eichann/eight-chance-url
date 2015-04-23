@@ -13,21 +13,101 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>あああ</title>
+      <title>hugo &#43; Github Pagesでブログ作成に挑戦した話</title>
       <link>/post/first/</link>
       <pubDate>Wed, 22 Apr 2015 21:10:09 JST</pubDate>
       
       <guid>/post/first/</guid>
       <description>
 
-&lt;h1 id=&#34;てすと:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;てすと&lt;/h1&gt;
+&lt;h1 id=&#34;hugoでブログをやってみる:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;hugoでブログをやってみる&lt;/h1&gt;
 
-&lt;h2 id=&#34;テストです:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;テストです！&lt;/h2&gt;
+&lt;p&gt;ブログをやってみようと思った時に、ここはRoRエンジニアっぽくjekyllでやってみるか！って思って調べてたら、もっと良さそうなものを見つけた。gitでリポジトリをプッシュするだけで簡単にブログ記事をあげられる＆記事の生成がめっちゃ早いということで評判が良かったので、&lt;a href=&#34;http://gohugo.io/&#34;&gt;hugo&lt;/a&gt;を使ってみることにしました。そして、ドハマりしたのでメモ。&lt;/p&gt;
 
-&lt;p&gt;これからはhugoの時代です&lt;/p&gt;
+&lt;h2 id=&#34;hugoの魅力:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;hugoの魅力&lt;/h2&gt;
 
-&lt;p&gt;ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れ
-ruyo&lt;/p&gt;
+&lt;h3 id=&#34;1-とにかく記事作成が楽:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;1. とにかく記事作成が楽&lt;/h3&gt;
+
+&lt;p&gt;最終的にですが、ターミナルから以下の手順だけでGithub pagesにてブログが更新できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ターミナル&#34;&gt;$cd ~/blog
+#hugoによって生成されたディレクトリまで移動
+$hugo new post/hugahoge.md
+#新規マークダウンファイルの作成
+$ ./deploy.sh
+#色々なコマンドの入ったシェルスクリプトの実行(コピペで手に入る)
+$ git push master
+#hugoによって生成されたディレクトリのリポジトリをgithub pagesのリモートにプッシュ(これはホントはやらなくて良い手順のハズ・・・・)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-watchコマンドでオートリロード:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;2. &amp;ndash;watchコマンドでオートリロード!!&lt;/h3&gt;
+
+&lt;p&gt;hugoでは、以下のコマンドで&lt;code&gt;localhost:1313&lt;/code&gt;からプレビューができます。この時、&lt;code&gt;--watch&lt;/code&gt;コマンドを利用することでmdファイルを更新する度にブラウザ側のプレビューも自動で更新されます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ターミナル&#34;&gt;#hugoのルート・ディレクトリから・・・
+$hugo server --watch -t hugo-zen
+#--watchコマンド！
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これがかなり便利です。いちいちcommand + r する手間が省けるのが素晴らしい。デュアルディスプレイとか&lt;a href=&#34;https://itunes.apple.com/jp/app/window-magnet/id441258766?mt=12&#34;&gt;window magnet&lt;/a&gt;とかで捗ります。&lt;/p&gt;
+
+&lt;h2 id=&#34;インストール-テーマの適用:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;インストール ~ テーマの適用&lt;/h2&gt;
+
+&lt;h3 id=&#34;インストール:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;インストール&lt;/h3&gt;
+
+&lt;p&gt;とっても簡単。homebrewユーザーなら、以下のコマンドで。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$cd 
+#ホームディレクトリに移動
+$brew install hugo
+#hugaじゃないよ
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;続いて、以下のコマンドで新たなhugoプロジェクトを作成。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ターミナル&#34;&gt;$hugo new site &amp;lt;your_site_name&amp;gt;
+#&amp;lt;&amp;gt;の部分は任意の名前を入れてね！
+$cd &amp;lt;your_site_name&amp;gt;
+#プロジェクトのルート・ディレクトリに移動しておきましょう
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;テーマの適用:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;テーマの適用&lt;/h3&gt;
+
+&lt;p&gt;このままビルドしても記事を作成することはできるのですが、最初からある程度デザインができている方が楽です。というわけで、テーマを適用しましょう。まずは以下のコマンドでテーマを利用できるようにします。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ターミナル&#34;&gt;$git clone --recursive https://github.com/spf13/hugoThemes.git themes
+#全てのテーマをダウンロード
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;今は全てのテーマをダウンロードしましたが、あとで利用するもの以外は削除してしまって構いません。&lt;/p&gt;
+
+&lt;p&gt;ところで、hugoはrailsなどと同じようにローカルでサーバーを立ち上げてプレビューすることができます。テーマは、その際にオプションで選択できます。&lt;/p&gt;
+
+&lt;h3 id=&#34;記事の作成:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;記事の作成&lt;/h3&gt;
+
+&lt;p&gt;次に、試しに記事を作ってみます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-記事の作成&#34;&gt;$hugo new post/hoge.md
+#content/post/hoge.md が作成されます
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;生成されたmdファイルを適当に編集して、いよいよプレビューしてみましょう。以下のコマンドを打ちます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ターミナル&#34;&gt;$hugo server -t 使用したいテーマ名 --watch
+#テーマを適用しつつ、プレビューを起動。例えば以下のように・・・
+$hugo server -t simple-a --watch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用したいテーマ名の部分には、themesというディレクトリに入っているテーマの名前を入れます。うまく動かないものもありますが、とりあえず良さそうなものがないか試してみましょう。&lt;/p&gt;
+
+&lt;p&gt;以下のように表示されれば成功です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/oo1.jpg&#34; alt=&#34;hugo-zen&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;謝辞:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;謝辞&lt;/h2&gt;
+
+&lt;p&gt;本ブログのテーマはrakuishi様の&lt;a href=&#34;https://github.com/rakuishi/hugo-zen&#34;&gt;hugo-zen&lt;/a&gt;をほんの少しカスタマイズして利用しています。どうもありがとうございます！！&lt;/p&gt;
 </description>
     </item>
     
