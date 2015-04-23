@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/skeleton.css">
 <link rel="stylesheet" href="/css/custom.css">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="さよなら厭世観">
-<title>あああ - さよなら厭世観</title>
+<title>hugo &#43; Github Pagesでブログ作成に挑戦した話 - さよなら厭世観</title>
 </head>
 <body>
 
@@ -25,22 +25,105 @@
 
 	<main role="main">
 		<article itemscope itemtype="http://schema.org/BlogPosting">
-			<h1 class="entry-title" itemprop="headline">あああ</h1>
+			<h1 class="entry-title" itemprop="headline">hugo &#43; Github Pagesでブログ作成に挑戦した話</h1>
 			<span class="entry-meta"><time itemprop="datePublished" datetime="2015-04-22">April 22, 2015</time></span>
 			<section itemprop="entry-text">
 				
 
-<h1 id="てすと:e8fb9c67eba912c72729806db31eaa1b">てすと</h1>
+<h1 id="hugoでブログをやってみる:e8fb9c67eba912c72729806db31eaa1b">hugoでブログをやってみる</h1>
 
-<h2 id="テストです:e8fb9c67eba912c72729806db31eaa1b">テストです！</h2>
+<p>ブログをやってみようと思った時に、ここはRoRエンジニアっぽくjekyllでやってみるか！って思って調べてたら、もっと良さそうなものを見つけた。gitでリポジトリをプッシュするだけで簡単にブログ記事をあげられる＆記事の生成がめっちゃ早いということで評判が良かったので、<a href="http://gohugo.io/">hugo</a>を使ってみることにしました。そして、ドハマりしたのでメモ。</p>
 
-<p>これからはhugoの時代です</p>
+<h2 id="hugoの魅力:e8fb9c67eba912c72729806db31eaa1b">hugoの魅力</h2>
 
-<p>ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れるよ！！ブログも作れ
-ruyo</p>
+<h3 id="1-とにかく記事作成が楽:e8fb9c67eba912c72729806db31eaa1b">1. とにかく記事作成が楽</h3>
+
+<p>最終的にですが、ターミナルから以下の手順だけでGithub pagesにてブログが更新できます。</p>
+
+<pre><code class="language-ターミナル">$cd ~/blog
+#hugoによって生成されたディレクトリまで移動
+$hugo new post/hugahoge.md
+#新規マークダウンファイルの作成
+$ ./deploy.sh
+#色々なコマンドの入ったシェルスクリプトの実行(コピペで手に入る)
+$ git push master
+#hugoによって生成されたディレクトリのリポジトリをgithub pagesのリモートにプッシュ(これはホントはやらなくて良い手順のハズ・・・・)
+</code></pre>
+
+<h3 id="2-watchコマンドでオートリロード:e8fb9c67eba912c72729806db31eaa1b">2. &ndash;watchコマンドでオートリロード!!</h3>
+
+<p>hugoでは、以下のコマンドで<code>localhost:1313</code>からプレビューができます。この時、<code>--watch</code>コマンドを利用することでmdファイルを更新する度にブラウザ側のプレビューも自動で更新されます。</p>
+
+<pre><code class="language-ターミナル">#hugoのルート・ディレクトリから・・・
+$hugo server --watch -t hugo-zen
+#--watchコマンド！
+</code></pre>
+
+<p>これがかなり便利です。いちいちcommand + r する手間が省けるのが素晴らしい。デュアルディスプレイとか<a href="https://itunes.apple.com/jp/app/window-magnet/id441258766?mt=12">window magnet</a>とかで捗ります。</p>
+
+<h2 id="インストール-テーマの適用:e8fb9c67eba912c72729806db31eaa1b">インストール ~ テーマの適用</h2>
+
+<h3 id="インストール:e8fb9c67eba912c72729806db31eaa1b">インストール</h3>
+
+<p>とっても簡単。homebrewユーザーなら、以下のコマンドで。</p>
+
+<pre><code>$cd 
+#ホームディレクトリに移動
+$brew install hugo
+#hugaじゃないよ
+</code></pre>
+
+<p>続いて、以下のコマンドで新たなhugoプロジェクトを作成。</p>
+
+<pre><code class="language-ターミナル">$hugo new site &lt;your_site_name&gt;
+#&lt;&gt;の部分は任意の名前を入れてね！
+$cd &lt;your_site_name&gt;
+#プロジェクトのルート・ディレクトリに移動しておきましょう
+</code></pre>
+
+<h3 id="テーマの適用:e8fb9c67eba912c72729806db31eaa1b">テーマの適用</h3>
+
+<p>このままビルドしても記事を作成することはできるのですが、最初からある程度デザインができている方が楽です。というわけで、テーマを適用しましょう。まずは以下のコマンドでテーマを利用できるようにします。</p>
+
+<pre><code class="language-ターミナル">$git clone --recursive https://github.com/spf13/hugoThemes.git themes
+#全てのテーマをダウンロード
+</code></pre>
+
+<p>今は全てのテーマをダウンロードしましたが、あとで利用するもの以外は削除してしまって構いません。</p>
+
+<p>ところで、hugoはrailsなどと同じようにローカルでサーバーを立ち上げてプレビューすることができます。テーマは、その際にオプションで選択できます。</p>
+
+<h3 id="記事の作成:e8fb9c67eba912c72729806db31eaa1b">記事の作成</h3>
+
+<p>次に、試しに記事を作ってみます。</p>
+
+<pre><code class="language-記事の作成">$hugo new post/hoge.md
+#content/post/hoge.md が作成されます
+</code></pre>
+
+<p>生成されたmdファイルを適当に編集して、いよいよプレビューしてみましょう。以下のコマンドを打ちます。</p>
+
+<pre><code class="language-ターミナル">$hugo server -t 使用したいテーマ名 --watch
+#テーマを適用しつつ、プレビューを起動。例えば以下のように・・・
+$hugo server -t simple-a --watch
+</code></pre>
+
+<p>使用したいテーマ名の部分には、themesというディレクトリに入っているテーマの名前を入れます。うまく動かないものもありますが、とりあえず良さそうなものがないか試してみましょう。</p>
+
+<p>以下のように表示されれば成功です。</p>
+
+<p><img src="/images/oo1.jpg" alt="hugo-zen" />
+</p>
+
+<h2 id="謝辞:e8fb9c67eba912c72729806db31eaa1b">謝辞</h2>
+
+<p>本ブログのテーマはrakuishi様の<a href="https://github.com/rakuishi/hugo-zen">hugo-zen</a>をほんの少しカスタマイズして利用しています。どうもありがとうございます！！</p>
 
 			</section>
 		</article>
+    <script>
+    document.write('<script src="//sharebutton.net/plugin/sharebutton.php?type=horizontal&u=' + encodeURIComponent(document.location.href) + '"></scr' + 'ipt>');
+    </script>
 	</main>
 
 
@@ -62,5 +145,8 @@ ruyo</p>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-</body>
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>

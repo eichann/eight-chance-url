@@ -6,12 +6,16 @@ body {
 
 h1 { font-size: 2.1rem;
      border-bottom: 1px solid #62A153;
+     color: #444;
 
    }
 h2 { font-size: 1.9rem;
      border-bottom: 1px solid #ddd;
+     color: #444;
     }
-h3 { font-size: 1.7rem; }
+h3 { font-size: 1.7rem;
+     color: #444;
+   }
 h4,
 h5,
 h6 { font-size: 1.5rem; }
@@ -54,6 +58,7 @@ main {
 }
 
 .entry-title {
+/*  font-size: 2.4rem;*/
   margin-bottom: 0;
   border: none;
   color: #444;
