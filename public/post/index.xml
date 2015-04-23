@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on さよなら厭世観</title>
-    <link>http://localhost:1313/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on さよなら厭世観</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,19 +10,19 @@
     
     
     <lastBuildDate>Wed, 22 Apr 2015 21:10:09 JST</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo &#43; Github Pagesでブログ作成に挑戦した話</title>
-      <link>http://localhost:1313/post/first/</link>
+      <link>/post/first/</link>
       <pubDate>Wed, 22 Apr 2015 21:10:09 JST</pubDate>
       
-      <guid>http://localhost:1313/post/first/</guid>
+      <guid>/post/first/</guid>
       <description>
 
 &lt;h1 id=&#34;hugoでブログをやってみる:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;hugoでブログをやってみる&lt;/h1&gt;
 
-&lt;p&gt;ブログをやってみようと思った時に、ここはRoRエンジニアっぽくjekyllでやってみるか！って思って調べてたら、もっと良さそうなものを見つけた。gitでリポジトリをプッシュするだけで簡単にブログ記事をあげられる＆記事の生成がめっちゃ早いということで評判が良かったので、&lt;a href=&#34;http://gohugo.io/&#34;&gt;hugo&lt;/a&gt;を使ってみることにしました。そして、ドハマりしたのでメモ。&lt;/p&gt;
+&lt;p&gt;ブログをやってみようと思った時に、ここはRuby書いてる人っぽくjekyllでやってみるか！って思って調べてたら、もっと良さそうなものを見つけた。gitでリポジトリをプッシュするだけで簡単にブログ記事をあげられる＆記事の生成がめっちゃ早いということで評判が良かったので、&lt;a href=&#34;http://gohugo.io/&#34;&gt;hugo&lt;/a&gt;を使ってみることにしました。そして、ドハマりしたのでメモ。&lt;/p&gt;
 
 &lt;h2 id=&#34;hugoの魅力:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;hugoの魅力&lt;/h2&gt;
 
@@ -36,7 +36,7 @@ $hugo new post/hugahoge.md
 #新規マークダウンファイルの作成
 $ ./deploy.sh
 #色々なコマンドの入ったシェルスクリプトの実行(コピペで手に入る)
-$ git push master
+$ git push origin master
 #hugoによって生成されたディレクトリのリポジトリをgithub pagesのリモートにプッシュ(これはホントはやらなくて良い手順のハズ・・・・)
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -50,6 +50,14 @@ $hugo server --watch -t hugo-zen
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これがかなり便利です。いちいちcommand + r する手間が省けるのが素晴らしい。デュアルディスプレイとか&lt;a href=&#34;https://itunes.apple.com/jp/app/window-magnet/id441258766?mt=12&#34;&gt;window magnet&lt;/a&gt;とかで捗ります。&lt;/p&gt;
+
+&lt;h3 id=&#34;3-markdown記法で気軽に書いて更新できる:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;3.Markdown記法で気軽に書いて更新できる&lt;/h3&gt;
+
+&lt;p&gt;これはjekyllなどでもそうですが、mdで書けるのは非常に楽です。普段からmdを書いているのもありますが、もう正直色をつけたり文字の大きさをいちいち変えたり「できる」というだけでまどろっこしいので。&lt;/p&gt;
+
+&lt;h3 id=&#34;4-記事の生成が早い:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;4.記事の生成が早い&lt;/h3&gt;
+
+&lt;p&gt;これは多くの人が言及しているので割愛。jekyllにはすごくお世話になっているのですが正直生成でストレスを感じたことはありません。上記のオートリロードが無いくらいですかね。&lt;/p&gt;
 
 &lt;h2 id=&#34;インストール-テーマの適用:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;インストール ~ テーマの適用&lt;/h2&gt;
 
@@ -91,7 +99,7 @@ $cd &amp;lt;your_site_name&amp;gt;
 #content/post/hoge.md が作成されます
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;生成されたmdファイルを適当に編集して、いよいよプレビューしてみましょう。以下のコマンドを打ちます。&lt;/p&gt;
+&lt;p&gt;生成されたmdファイルを適当に編集して、プレビューしてみましょう。以下のコマンドを打ちます。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-ターミナル&#34;&gt;$hugo server -t 使用したいテーマ名 --watch
 #テーマを適用しつつ、プレビューを起動。例えば以下のように・・・
@@ -100,10 +108,105 @@ $hugo server -t simple-a --watch
 
 &lt;p&gt;使用したいテーマ名の部分には、themesというディレクトリに入っているテーマの名前を入れます。うまく動かないものもありますが、とりあえず良さそうなものがないか試してみましょう。&lt;/p&gt;
 
-&lt;p&gt;以下のように表示されれば成功です。&lt;/p&gt;
+&lt;p&gt;以下のように表示されれば成功です。(と思ったら画像がうまく表示できない・・・)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/oo1.jpg&#34; alt=&#34;hugo-zen&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;images/001.jpg&#34; alt=&#34;purehugo&#34; /&gt;
 &lt;/p&gt;
+
+&lt;h2 id=&#34;github-pagesで公開:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;github pagesで公開&lt;/h2&gt;
+
+&lt;p&gt;ここが一番詰まりました。「サーバー立ち上げたらテーマが適用されるのね。ほう、publicディレクトリができてそこに静的ファイルが生成されるとな？」とまでは良かったのですが、そもそもgithub pagesを使ったことがなかったのでその仕組みを知るのに一苦労。そして、いい感じのurlで表示できるようになるまでにまた一苦労。&lt;/p&gt;
+
+&lt;p&gt;基本的には、以下のhugoの公式docを読めばなんとかなるっぽいですが。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog/&#34;&gt;Github Pagesへのセットアップ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;よくわからなかったので、いろんな記事を参考に自分なりにやりました。これから紹介する方法は不完全ですので、完全版を教えていただけますと大変助かります(汗&lt;/p&gt;
+
+&lt;h3 id=&#34;リポジトリを2つ作成:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;リポジトリを2つ作成&lt;/h3&gt;
+
+&lt;p&gt;まずはgithub上で、リモートリポジトリを2つ作ります。1つは名前はなんでも大丈夫です。もう一つは公開用なのでgithub pagesの規約どおりに作ります。ここでは前者から&lt;/p&gt;
+
+&lt;p&gt;hogehuga&lt;/p&gt;
+
+&lt;p&gt;username.github.io&lt;/p&gt;
+
+&lt;p&gt;とします。&lt;/p&gt;
+
+&lt;p&gt;2つのリモートリポジトリが作れたら、次はhugoプロジェクトのルートディレクトリでローカルリポジトリを作り、先ほど作ったhogehugaの方にaddします。すでにプレビューをしているなら、ルートディレクトリ下に&lt;code&gt;public&lt;/code&gt;フォルダができていますが、こちらは&lt;strong&gt;消しておく必要があります。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$cd ~/blog
+#プロジェクトのルート・ディレクトリに移動
+$rm -rf public
+#publicフォルダを削除
+$git init
+#gitコマンドでローカルリポジトリを作成
+$git remote add origin https://github.com/&amp;lt;gitのuser名&amp;gt;/hogehuga.git
+$git add .
+#カレントディレクトリ以下を全てadd
+$git commit -m &amp;quot;first commit&amp;quot;
+#コミット
+$git push origin master
+#プッシュ
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;続いてGithub Pagesの表示で利用するリポジトリのpublicフォルダをhogehugaのサブモジュールとして追加します。なので、もう一度publicフォルダを作り直します。そのために、ビルドのコマンドを打ちます。ここでは、&lt;code&gt;hugo -t テンプレート名&lt;/code&gt;とすると再びpublicフォルダを作成できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$hugo -t &amp;lt;テンプレート名&amp;gt;
+#publicフォルダに静的ファイルを生成
+$git submodule add git@github.com:&amp;lt;githubのユーザー名&amp;gt;/&amp;lt;githubのユーザー名&amp;gt;.github.io.git public
+#サブモジュールとしてpublicフォルダを追加
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gitのサブモジュールっていうのはあくまで本体の一部のディレクトリを別のリポジトリで管理するものだと思ってましたが、hugoのページを読んでいるとどうも本家の方を更新することで本家のサブモジュールであるpublicも更新されて結果が反映される、みたいなノリなんですよね。よくわからない。。&lt;/p&gt;
+
+&lt;p&gt;ここまで来たら、プロジェクトのルート・ディレクトリに以下の内容のシェルスクリプト&lt;code&gt;deploy.sh&lt;/code&gt;を作成します。途中記事をビルドする&lt;code&gt;hugo&lt;/code&gt;の後に、 &lt;code&gt;-t&lt;/code&gt;オプションでテーマを指定することを忘れないでください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#deploy.shの中身
+#!/bin/bash
+
+echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
+
+# Build the project. 
+hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;`
+
+#↑ここを変更しましょう！！
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add -A
+
+# Commit changes.
+msg=&amp;quot;rebuilding site `date`&amp;quot;
+if [ $# -eq 1 ]
+  then msg=&amp;quot;$1&amp;quot;
+fi
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back
+cd ..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;あとは冒頭で示した通り、&lt;code&gt;deploy.sh&lt;/code&gt;を実行し、本体をプッシュすることでhugoのプロジェクトが更新されます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#hugoプロジェクトのルートディレクトリから・・・
+$./deploy.sh
+#deploy.shの実行
+$git push origin master
+#本体もプッシュする
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;いよいよ、Github Pagesにアクセスしてみましょう。先ほど作成したリポジトリの名前がそのままurlになっていますので、&lt;code&gt;gitのusername.github.io&lt;/code&gt;というurlでいけるはずです。&lt;/p&gt;
+
+&lt;p&gt;無事、hugoのブログが表示されたでしょうか。&lt;/p&gt;
+
+&lt;h2 id=&#34;感想:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;本当ならddploy.shを実行するだけでいけるはず？また、画像の表示がうまくいかない、カテゴリーやタグ付けのやり方がわからないなど、まだやることはいっぱいですが、とりあえず楽にmdで書けるブログが手に入ったのは非常に良かったです。ちょいちょいカスタマイズしていきます。&lt;/p&gt;
 
 &lt;h2 id=&#34;謝辞:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;謝辞&lt;/h2&gt;
 
