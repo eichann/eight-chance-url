@@ -9,8 +9,20 @@
     
     
     
-    <lastBuildDate>Wed, 22 Apr 2015 21:10:09 JST</lastBuildDate>
+    <lastBuildDate>Wed, 02 Dec 2015 02:23:45 JST</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>お久ぶりです</title>
+      <link>/post/secound/</link>
+      <pubDate>Wed, 02 Dec 2015 02:23:45 JST</pubDate>
+      
+      <guid>/post/secound/</guid>
+      <description>
+
+&lt;h1 id=&#34;立派なvimmerになるた-め-に:dd416d643c564c62831111e255efa21b&#34;&gt;立派なVimmerになるた め に&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>hugo &#43; Github Pagesでブログ作成に挑戦した話</title>

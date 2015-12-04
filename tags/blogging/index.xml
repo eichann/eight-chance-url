@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on さよなら厭世観</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on さよなら厭世観</description>
+    <title>Blogging on さよなら厭世観</title>
+    <link>/tags/blogging/</link>
+    <description>Recent content in Blogging on さよなら厭世観</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     
     
     
-    <lastBuildDate>Wed, 02 Dec 2015 02:23:45 JST</lastBuildDate>
-    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>お久ぶりです</title>
-      <link>/post/secound/</link>
-      <pubDate>Wed, 02 Dec 2015 02:23:45 JST</pubDate>
-      
-      <guid>/post/secound/</guid>
-      <description>
-
-&lt;h1 id=&#34;立派なvimmerになるた-め-に:dd416d643c564c62831111e255efa21b&#34;&gt;立派なVimmerになるた め に&lt;/h1&gt;
-</description>
-    </item>
+    <lastBuildDate>Wed, 22 Apr 2015 21:10:09 JST</lastBuildDate>
+    <atom:link href="/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo &#43; Github Pagesでブログ作成に挑戦した話</title>
