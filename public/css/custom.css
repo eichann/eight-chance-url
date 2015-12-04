@@ -1,3 +1,4 @@
+
 body {
   font-family: "PT Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #FCFCFC;
@@ -31,6 +32,10 @@ header,
 footer {
   margin: 4rem 0;
   text-align: center;
+}
+
+ul, li {
+  margin:0;
 }
 
 main {
@@ -86,4 +91,15 @@ main {
   background: -webkit-gradient(linear, left top, right top, from(white), color-stop(#E1E1E1), to(white));
   background: -webkit-linear-gradient(left, white, #E1E1E1, white);
   background: linear-gradient(to right, white, #E1E1E1, white);
+}
+
+#tags li{
+  display: inline-block;
+  /*margin-bottom: 2rem;*/
+  font-size: 1.7rem;
+  color: #ddd;
+}
+#tags li a{
+  font-size: 1.7rem;
+  color: #aaa;
 }

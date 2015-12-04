@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>eichann&#39;s blog</title>
-    <link>/</link>
-    <description>Recent content on eichann&#39;s blog</description>
+    <title>Go on eichann&#39;s blog</title>
+    <link>/tags/go/</link>
+    <description>Recent content in Go on eichann&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     
     
     
-    <lastBuildDate>Wed, 02 Dec 2015 02:23:45 JST</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>「反応しない練習」を読んだ</title>
-      <link>/post/secound/</link>
-      <pubDate>Wed, 02 Dec 2015 02:23:45 JST</pubDate>
-      
-      <guid>/post/secound/</guid>
-      <description>
-
-&lt;p&gt;原始仏教の教えに基づき、幸せに生きるための考え方のコツを伝えてくれる本。&lt;/p&gt;
-
-&lt;h1 id=&#34;ポイント:dd416d643c564c62831111e255efa21b&#34;&gt;ポイント&lt;/h1&gt;
-
-&lt;p&gt;心とは放っておくと常に何かを求める性質を持っているので、そういうものだと理解し客観視できるように務める。
-また、主観による判断をすることは無駄である。主観による判断は全て妄想に過ぎないからである。&lt;/p&gt;
-
-&lt;h1 id=&#34;ここが良かった:dd416d643c564c62831111e255efa21b&#34;&gt;ここが良かった&lt;/h1&gt;
-
-&lt;p&gt;本書によれば、人は皆「求める心」を持っている。例えば、生存欲求、睡眠欲求、食欲、承認欲求などである。これは人である限り仕方のないことであり、欲求から逃れることはできない。この事実を「心は元来『欲求するもの』なんだ」という形で理解することで、これまでは1つ1つの悩みごとに対してなんとか対処しようとしていたところをもう一つメタ的な視点で捉えるという知見を得ることができたのが良かった。
-なるほど確かに「心はそういうものなんだ」と一歩引いた目で見ると、なぜだか感情が落ち着く。
-　また、「自信とは不合理な考え方である」「勝手に判断をしない」「」&lt;/p&gt;
-
-&lt;h1 id=&#34;ここが悪かった:dd416d643c564c62831111e255efa21b&#34;&gt;ここが悪かった&lt;/h1&gt;
-
-&lt;p&gt;ネガティブな動機づけにより奮起して頑張る、といったことも人生にはあると思うんだけど、これに関しては触れられていなかった。競争について書かれている部分も、「勝ちたいとも負けたいとも思うな」というなんとも微妙な主張になっているように思えた。&lt;/p&gt;
-</description>
-    </item>
+    <lastBuildDate>Wed, 22 Apr 2015 21:10:09 JST</lastBuildDate>
+    <atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo &#43; Github Pagesでブログ作成に挑戦した話</title>

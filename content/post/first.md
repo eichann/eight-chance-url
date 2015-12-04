@@ -1,6 +1,7 @@
 +++
 date = "2015-04-22T21:10:09+09:00"
 title = "hugo + Github Pagesでブログ作成に挑戦した話"
+tags = [ "hugo" ]
 
 +++
 
@@ -12,6 +13,7 @@ title = "hugo + Github Pagesでブログ作成に挑戦した話"
 ### 1. とにかく記事作成が楽
 
 最終的にですが、ターミナルから以下の手順だけでGithub pagesにてブログが更新できます。
+
 
 ```ターミナル
 $cd ~/blog
