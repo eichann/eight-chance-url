@@ -1,7 +1,7 @@
 +++
 date = "2015-04-22T21:10:09+09:00"
 title = "hugo + Github Pagesでブログ作成に挑戦した話"
-tags = [ "hoge" ]
+tags = [ "hugo" ]
 
 +++
 
