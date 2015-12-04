@@ -1,6 +1,6 @@
 baseurl = ""
 languageCode = "ja"
-title = "さよなら厭世観"
+title = "eichann's blog"
 author = "rakuishi"
 
 [params]
@@ -10,3 +10,8 @@ author = "rakuishi"
   facebook  = "https://www.facebook.com/koichiro.abe.14"
   github    = "https://github.com/eichann/"
   email     = "k.abe.in401@gmail.com"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
