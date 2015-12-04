@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on eichann&#39;s blog</title>
-    <link>http://localhost:1313/tags/hugo/</link>
-    <description>Recent content in Hugo on eichann&#39;s blog</description>
+    <title>Hoge on eichann&#39;s blog</title>
+    <link>/tags/hoge/</link>
+    <description>Recent content in Hoge on eichann&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     
     
     
     <lastBuildDate>Wed, 22 Apr 2015 21:10:09 JST</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/hoge/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo &#43; Github Pagesでブログ作成に挑戦した話</title>
-      <link>http://localhost:1313/post/first/</link>
+      <link>/post/first/</link>
       <pubDate>Wed, 22 Apr 2015 21:10:09 JST</pubDate>
       
-      <guid>http://localhost:1313/post/first/</guid>
+      <guid>/post/first/</guid>
       <description>
 
 &lt;h1 id=&#34;hugoでブログをやってみる:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;hugoでブログをやってみる&lt;/h1&gt;
