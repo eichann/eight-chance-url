@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go Web Dev on eichann&#39;s blog</title>
-    <link>/series/go-web-dev/</link>
+    <link>http://localhost:1313/series/go-web-dev/</link>
     <description>Recent content in Go Web Dev on eichann&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,14 +10,14 @@
     
     
     <lastBuildDate>Wed, 22 Apr 2015 21:10:09 JST</lastBuildDate>
-    <atom:link href="/series/go-web-dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/series/go-web-dev/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hugo &#43; Github Pagesでブログ作成に挑戦した話</title>
-      <link>/post/first/</link>
+      <link>http://localhost:1313/post/first/</link>
       <pubDate>Wed, 22 Apr 2015 21:10:09 JST</pubDate>
       
-      <guid>/post/first/</guid>
+      <guid>http://localhost:1313/post/first/</guid>
       <description>
 
 &lt;h1 id=&#34;hugoでブログをやってみる:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;hugoでブログをやってみる&lt;/h1&gt;
